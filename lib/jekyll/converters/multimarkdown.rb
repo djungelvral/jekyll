@@ -26,7 +26,6 @@ module Jekyll
 
     def convert(content)
       setup
-      puts "Using MMD"
       MultiMarkdown.new(content).to_html
     end
   end
