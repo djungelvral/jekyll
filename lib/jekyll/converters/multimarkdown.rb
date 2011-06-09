@@ -6,6 +6,8 @@ module Jekyll
     pygments_prefix "\n"
     pygments_suffix "\n"
 
+    priority :highest
+
     def setup
       return if @setup
       require 'multimarkdown'
@@ -17,7 +19,7 @@ module Jekyll
     end
 
     def matches(ext)
-      ext =~ /multi/i
+      ext =~ /mmd/i
     end
 
     def output_ext(ext)
